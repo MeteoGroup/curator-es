@@ -20,10 +20,10 @@ RUN apk --no-cache --update --upgrade add python py-setuptools py-pip \
     sed -i '/import sys/a import urllib3.contrib.pyopenssl' /usr/bin/curator && \
     sed -i '/import sys/a import urllib3' /usr/bin/curator
 
-COPY *.yml /tmp/
+COPY . /tmp/
 
 RUN addgroup curator && \
-    adduser -S -s /bin/bash -G curator curator
+    adduser -S -G curator curator
 
 USER curator
 
