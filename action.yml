@@ -5,7 +5,7 @@ actions:
   1:
     action: delete_indices
     description: >-
-      Delete indices older than DELETE_DAY days (based on index name), for INDEX_PREFIX
+      Delete indices older than KEEP_DAYS days (based on index name), for INDEX_PREFIX
       prefixed indices. Ignore the error if the filter does not result in an
       actionable list of indices (ignore_empty_list) and exit cleanly.
     options:
@@ -20,4 +20,4 @@ actions:
       direction: older
       timestring: ${TIME_STRING:'%Y.%m.%d'}
       unit: days
-      unit_count: ${DELETE_DAY:14}
+      unit_count: ${KEEP_DAYS:14}

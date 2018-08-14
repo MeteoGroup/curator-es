@@ -3,7 +3,7 @@ The docker image for curator is based on alpine to have a small image footprint
 
 ## Usage Quick Start
 Start container specifying the environment settings for Curator configuration and actions.
-Currently the only action executed by the docker built is to remove old Elasticsearch indices
+Currently the only action executed by the docker run is to remove old Elasticsearch indices
 leaving only a configurable amount of days
 
 ```
@@ -19,4 +19,4 @@ List of environment settings:
 - SSL - if access to Elasticsearch is protected by SSL, has to be "True", default "False"
 - INDEX_PREFIX - name for the prefix, default "dataprovisioning*"
 - TIME_STRING - default '%Y.%m.%d'
-- DELETE_DAY - default 14
+- KEEP_DAYS - default 14
