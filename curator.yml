@@ -15,6 +15,7 @@ client:
   timeout: 30
   master_only: False
   aws_sign_request: True
+  aws_region: eu-west-1
 
 logging:
   loglevel: DEBUG
