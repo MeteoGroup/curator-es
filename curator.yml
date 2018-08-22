@@ -14,6 +14,7 @@ client:
   http_auth:
   timeout: 30
   master_only: False
+  aws_sign_request: True
 
 logging:
   loglevel: DEBUG
