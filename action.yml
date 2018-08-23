@@ -14,10 +14,10 @@ actions:
     filters:
     - filtertype: pattern
       kind: prefix
-      value: ${INDEX_PREFIX:dataprovisioning*}
+      value: ${INDEX_PREFIX:dataprovisioning-}
     - filtertype: age
       source: name
       direction: older
-      timestring: ${TIME_STRING:'%Y.%m.%d'}
+      timestring: ${TIME_STRING:%Y.%m.%d}
       unit: days
       unit_count: ${KEEP_DAYS:14}
